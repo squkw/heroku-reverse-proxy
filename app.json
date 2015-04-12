@@ -1,0 +1,9 @@
+{
+    "name": "Heroku Reverse Proxy",
+    "env": {
+        "REVERSE_HOST": {
+            "description": "<BACKEND SERVER ADDRESS>",
+            "require": true
+        }
+    }
+}
