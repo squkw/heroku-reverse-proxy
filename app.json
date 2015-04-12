@@ -1,9 +1,17 @@
 {
     "name": "Heroku Reverse Proxy",
     "env": {
-        "REVERSE_HOST": {
-            "description": "<BACKEND SERVER ADDRESS>",
-            "require": true
+        "REVERSE_URL": {
+            "description": "<url for backend, like 'http://my-app.herokuapp.com/'>",
+            "required": true
+        },
+        "BASIC_AUTH_USERNAME": {
+            "description": "<username for Basic auth (same as backend)>",
+            "required": false
+        },
+        "BASIC_AUTH_PASSWORD": {
+            "description": "<raw password for Basic auth (same as backend)>",
+            "required": false
         }
     }
 }
