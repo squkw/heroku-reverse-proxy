@@ -1,8 +1,6 @@
 require 'rack/reverse_proxy'
 
-class Application < Rails::Application
-    config.middleware.use Rack::Deflater
-end
+use Rack::Deflater
 
 if ENV['BASIC_AUTH_USERNAME'] && ENV['BASIC_AUTH_PASSWORD'] && !ENV['BASIC_AUTH_USERNAME'].empty? && !ENV['BASIC_AUTH_PASSWORD'].empty?
   use Rack::Auth::Basic do |username, password|
